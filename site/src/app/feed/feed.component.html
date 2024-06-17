@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row mt-5 mb-5">
+    <div class="col-md-4">
+      <div class="sticky-section">
+        <div class="card border-0" style="width: 18rem;">
+          <div class="d-flex justify-content-center">
+            <img src="https://uploaddeimagens.com.br/images/004/799/861/thumb/euuu.jpg?1718636011" class="card-img-top rounded-circle w-75" alt="Logo">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Vinicius</h5>
+            <p class="card-text">Desenvolvedor Fullstack</p>
+            <a href="https://github.com/ViniciusCgama" target="_blank" class="btn btn-outline-dark d-flex justify-content-center">GitHub</a>
+            <hr class="mt-4 mb-4">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div>
+        <form [formGroup]="postForm">
+          <div class="form-group">
+            <label for="mensagem" class="text-monospace">Mensagem:</label>
+            <textarea id="mensagem" class="form-control" rows="4" placeholder="Digite a sua mensagem" formControlName="mensagem" required></textarea>
+          </div>
+          <div *ngIf="selectedImage">
+            <img [src]="selectedImage" alt="Image Preview" style="max-width: 100%; height: auto;">
+          </div>
+          <div class="d-flex justify-content-end">
+            <button class="btn btn-outline-success w-25" (click)="fileInput.click()">Upload</button>
+            <button type="submit" class="btn btn-outline-success w-25" (click)="cadastrarMensagem()">Publicar</button>
+            <input type="file" #fileInput (change)="onFileSelected($event)" class="hidden">
+          </div>
+        </form>
+      </div>
+
+      <hr class="mt-5 mb-5">
+
+      <div class="container">
+        <div class="card mb-4" *ngFor="let post of listPost">
+          <div class="card-header">
+            <h5 class="card-title">{{ post.nome }}</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{ post.mensagem }}</p>
+            <img *ngIf="post.foto_url" class="card-img-top" [src]="post.foto_url" alt="Image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
