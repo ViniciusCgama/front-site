@@ -1,0 +1,27 @@
+{
+  "name": "tccs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch banco.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^8.16.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "json-server": "^1.0.0-beta.1",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.10.1",
+    "nodemon": "^3.1.3",
+    "pg": "^8.12.0",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
