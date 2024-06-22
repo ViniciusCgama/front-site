@@ -4,12 +4,20 @@
       <div class="sticky-section">
         <div class="card border-0" style="width: 18rem;">
           <div class="d-flex justify-content-center">
-            <img src="https://uploaddeimagens.com.br/images/004/799/861/thumb/euuu.jpg?1718636011" class="card-img-top rounded-circle w-75" alt="Logo">
+            <img src="https://uploaddeimagens.com.br/images/004/802/916/thumb/21104.png?1719008015" class="card-img-top rounded-circle w-75" alt="Logo">
           </div>
           <div class="card-body text-center">
             <h5 class="card-title">Vinicius</h5>
             <p class="card-text">Desenvolvedor Fullstack</p>
             <a href="https://github.com/ViniciusCgama" target="_blank" class="btn btn-outline-dark d-flex justify-content-center">GitHub</a>
+
+            <div [formGroup]="form">
+            <label for="topic" class="text-monospace">Selecione um tópico:</label>
+            <select id="topic" class="form-select" aria-label="Default select example" formControlName="topic">
+              <option *ngFor="let topic of topics" [value]="topic">{{ topic }}</option>
+            </select>
+             <button (click)="buscarTopico()">Buscar por tópico</button>
+            </div>
             <hr class="mt-4 mb-4">
 
           </div>
@@ -24,22 +32,6 @@
             <label for="topic" class="text-monospace">Selecione um tópico:</label>
             <select id="topic" class="form-select" aria-label="Default select example" formControlName="topic">
               <option *ngFor="let topic of topics" [value]="topic">{{ topic }}</option>
-              <option value="Outros" selected>Selecione um tópico</option>
-              <option value="Java">Java</option>
-              <option value="JavaScript">JavaScript</option>
-              <option value="C">C</option>
-              <option value="C#">C#</option>
-              <option value="C++">C++</option>
-              <option value="PHP">PHP</option>
-              <option value="Python">Python</option>
-              <option value="Angular">Angular</option>
-              <option value="Kotlin">Kotlin</option>
-              <option value="Banco de dados">Banco de dados</option>
-              <option value="HTML">HTML</option>
-              <option value="CSS">React</option>
-              <option value="Git">GIT</option>
-              <option value="Outros">Outros</option>
-
             </select>
             <label for="mensagem" class="text-monospace">Mensagem:</label>
             <textarea id="mensagem" class="form-control" rows="4" placeholder="Digite a sua mensagem" formControlName="mensagem" required></textarea>
@@ -61,7 +53,7 @@
             <h5 class="card-title">{{ post.nome }}</h5>
           </div>
           <div class="card-body">
-            <p>{{ postForm.get('topic')?.value}}</p>
+            <h6>{{ post.topic }}</h6>
             <p class="card-text">{{ post.mensagem }}</p>
           </div>
         </div>

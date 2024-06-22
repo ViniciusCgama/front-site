@@ -1,57 +1,107 @@
 {
   "$posts": [
     {
-      "id": "4353",
-      "nome": "Vinicius",
-      "mensagem": "\n[ç´\n\n",
-      "foto_url": ""
-    },
-    {
-      "id": "ac27",
-      "nome": "Vinicius",
-      "mensagem": "aaaaaaaaaaaaaaaa"
-    },
-    {
-      "id": "da35",
-      "topic": "",
-      "nome": "Vinicius",
-      "mensagem": "AIIIIIIIIIII"
-    },
-    {
       "id": "bf1b",
       "topic": "C",
       "nome": "Vinicius",
-      "mensagem": "ç"
+      "mensagem": "A linguagem C é muito eficiente para desenvolvimento de sistemas de baixo nível."
     },
     {
       "id": "3094",
       "topic": "JavaScript",
-      "nome": "Vinicius",
-      "mensagem": "ghjhg"
+      "nome": "Maria",
+      "mensagem": "Eu amo programar em JavaScript, especialmente para criar aplicações web interativas."
     },
     {
       "id": "4fc8",
       "topic": "C",
-      "nome": "Vinicius",
-      "mensagem": "hhhhhhhhhhhhh"
+      "nome": "Pedro",
+      "mensagem": "Trabalho com C há anos e sempre me impressiono com sua velocidade de execução."
     },
     {
       "id": "c95d",
-      "topic": "C",
-      "nome": null,
-      "mensagem": null
+      "topic": "C++",
+      "nome": "Ana",
+      "mensagem": "C++ é uma linguagem poderosa que permite uma gestão mais detalhada da memória."
     },
     {
       "id": "7fd4",
       "topic": "C#",
-      "nome": "Vinicius",
-      "mensagem": "lllllllllll"
+      "nome": "João",
+      "mensagem": "Desenvolvo aplicações corporativas usando C# e .NET Core, é excelente para integrações."
     },
     {
       "id": "7c6b",
       "topic": "C",
       "nome": "Vinicius",
-      "mensagem": "fc"
+      "mensagem": "Estou estudando algoritmos avançados em C, é desafiador mas gratificante."
+    },
+    {
+      "id": "8404",
+      "topic": "PHP",
+      "nome": "Laura",
+      "mensagem": "PHP é uma ótima escolha para desenvolver sistemas web dinâmicos e eficientes."
+    },
+    {
+      "id": "195d",
+      "topic": "Outros",
+      "nome": "Vinicius",
+      "mensagem": "Estou explorando novas linguagens de programação para expandir meu horizonte."
+    },
+    {
+      "id": "7cd3",
+      "topic": "HTML",
+      "nome": "Fernanda",
+      "mensagem": "HTML é a base de todas as páginas web, estou sempre aprendendo novas tags."
+    },
+    {
+      "id": "ce4e",
+      "topic": "Python",
+      "nome": "Rafael",
+      "mensagem": "Python é minha linguagem favorita para automação e análise de dados."
+    },
+    {
+      "id": "8c83",
+      "topic": "Banco de dados",
+      "nome": "Gabriel",
+      "mensagem": "Trabalho com bancos de dados SQL há anos, adoro otimizar consultas complexas."
+    },
+    {
+      "id": "e86c",
+      "topic": "GIT",
+      "nome": "Eduarda",
+      "mensagem": "GIT facilita muito o versionamento de código em equipe, não vivo mais sem ele."
+    },
+    {
+      "id": "e1f1",
+      "topic": "Angular",
+      "nome": "Lucas",
+      "mensagem": "Angular é incrível para desenvolver aplicações front-end robustas e escaláveis."
+    },
+    {
+      "id": "4f67",
+      "topic": "CSS",
+      "nome": "Carla",
+      "mensagem": "CSS me permite criar designs elegantes para páginas web, é como arte para mim."
+    },
+    {
+      "id": "3e2c",
+      "topic": "Kotlin",
+      "nome": "Mateus",
+      "mensagem": "Kotlin é uma linguagem moderna que facilita muito o desenvolvimento Android."
+    },
+    {
+      "id": "4dc8",
+      "topic": "Java",
+      "nome": "Mariana",
+      "mensagem": "Java é robusto e multiplataforma, ideal para sistemas corporativos complexos."
+    },
+    {
+      "id": "369f",
+      "topic": "C",
+      "nome": "Vinicius",
+      "mensagem": "Alguem sabe como iniciar um projeto em C?"
     }
   ]
 }
+

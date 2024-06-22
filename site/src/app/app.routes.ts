@@ -7,7 +7,7 @@ import { NgModule } from '@angular/core';
 import { ContatoComponent } from './contato/contato.component';
 
 export const routes: Routes = [
-    {path: '', redirectTo: 'home', pathMatch: 'full'},
+    {path: '', redirectTo: 'feed', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
     {path: 'feed', component: FeedComponent},
     {path: 'contato', component: ContatoComponent},

@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 export class FeedComponent implements OnInit {
 
   postForm: FormGroup;
+  form: FormGroup;
   topics: string[] = [
     'Java',
     'JavaScript',
@@ -31,12 +32,15 @@ export class FeedComponent implements OnInit {
     'Outros'
   ];
   listPost: Post[] = [];
-  pesquisaNome: string = '';
+  pesquisaTopico: string = '';
   post!: PostService;
   selectedImage: string | ArrayBuffer | null = null;
   selectedFile: File | null = null;
 
   constructor(private postService: PostService, private formBuilder: FormBuilder) {
+    this.form = this.formBuilder.group({
+      topic: ['', Validators.required],
+     });
     this.postForm = this.formBuilder.group({
       topic: ['', Validators.required],
       nome: ['Vinicius', [Validators.required, Validators.minLength(2)]],
@@ -47,6 +51,7 @@ export class FeedComponent implements OnInit {
   ngOnInit(): void {
     this.findPosts();
   }
+
 
   findPosts() {
     this.postService.getPosts().subscribe((data: Post[]) => {
@@ -59,19 +64,18 @@ export class FeedComponent implements OnInit {
     this.postService.postMensagem(post).subscribe((newPost: Post) => {
       this.listPost.unshift(newPost);
       this.postForm.patchValue({ mensagem: '' });
-      this.selectedImage = null;
       console.log(this.postForm.value);
-      this.postForm.reset();
     });
   }
 
-  pesquisarPostPorNome() {
-    if (this.pesquisaNome.trim().length > 0) {
-      this.postService.pesquisarPostPorNome(this.pesquisaNome).subscribe((resp: Post[]) => {
+  buscarTopico() {
+    const topic = this.form.get('topic')?.value;
+    if (topic.trim().length > 0) {
+      this.postService.buscarTopico(topic).subscribe((resp: Post[]) => {
         this.listPost = resp;
       });
     } else {
       this.findPosts();
-    }
   }
+}
 }

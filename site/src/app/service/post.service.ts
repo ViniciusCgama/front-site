@@ -19,7 +19,9 @@ export class PostService {
     return this.http.post<Post>(`${this.baseUrl}/$posts`, post);
   }
 
-  pesquisarPostPorNome(nome: string): Observable<Post[]> {
-    return this.http.get<Post[]>(`${this.baseUrl}/$posts?nome_like=${nome}`);
+  buscarTopico(topic: string): Observable<Post[]> {
+    return this.http.get<Post[]>(`${this.baseUrl}/$posts?topic=${topic}`);
   }
+
+
 }
